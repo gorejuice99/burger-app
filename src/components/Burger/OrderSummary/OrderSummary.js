@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Aux from '../../../hoc/Auxx/Aux';
 import Button from '../../UI/Button/Button';
 class OrderSummary extends Component {
     render () {
@@ -13,7 +12,7 @@ class OrderSummary extends Component {
         });
 
         return (
-            <Aux>
+            <React.Fragment>
                 <h3>Your Order</h3>
                 <p>A delicious burger with the following ingredients: </p>
                 <ul>
@@ -24,7 +23,7 @@ class OrderSummary extends Component {
                 <Button btnType="Danger" clicked={this.props.purchaseCanceled}>CANCEL</Button>
                 <Button btnType="Success" clicked={this.props.purchaseContinued}>CONTINUE</Button>
                 
-            </Aux>
+            </React.Fragment>
         );
     }
 };
