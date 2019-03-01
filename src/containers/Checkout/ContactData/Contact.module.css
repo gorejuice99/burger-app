@@ -8,10 +8,6 @@
     padding: 10px;
 }
 
-.ContactData input {
-    display: block;
-    padding: 2px;
-}
 
 @media (min-width: 600px) {
     .ContactData {
