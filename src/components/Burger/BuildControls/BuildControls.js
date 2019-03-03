@@ -2,6 +2,7 @@ import React from 'react';
 
 import classes from './BuildControls.module.css';
 import BuildControl from './BuildControl/BuildControl';
+
 const controls = [
     {label: 'Salad', type: 'salad'},
     {label: 'Bacon', type: 'bacon'},
@@ -17,7 +18,7 @@ const buildControls = (props) => (
                 key={ctrl.label} 
                 label={ctrl.label}
                 added={() => props.ingredientAdded(ctrl.type)}
-                deducted={() => props.ingredientDeducted(ctrl.type)}  
+                removed={() => props.ingredientRemoved(ctrl.type)}  
                 disabled={props.disabled[ctrl.type]}  
             />
         ))}
